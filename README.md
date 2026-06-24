@@ -49,7 +49,7 @@ Collect these URLs before deployment:
 
 | Variable | Example | Description |
 |----------|---------|-------------|
-| `ADMIN_URL` | `https://t.me/your_admin` | Admin Telegram profile |
+| `ADMIN_URL` | `https://t.me/ccshop_cc` | Admin Telegram profile |
 | `CHANNEL_URL` | `https://t.me/your_channel` | Shop Telegram channel |
 | `SHOP_URL` | `https://your-shop.com` | Main shop website |
 | `CATEGORY_PODS_URL` | `https://your-shop.com/pods` | Optional, defaults to `SHOP_URL` |

@@ -1,0 +1,13 @@
+{
+  "name": "ccshop-sale-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "set-webhook": "node scripts/set-webhook.js"
+  }
+}

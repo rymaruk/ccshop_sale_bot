@@ -1,5 +1,5 @@
 import { config } from "../lib/config.js";
-import { getWebhookInfo, setWebhook } from "../lib/telegram.js";
+import { getWebhookInfo, setChatMenuButton, setWebhook } from "../lib/telegram.js";
 
 export default async function handler(req, res) {
   if (req.method !== "GET" && req.method !== "POST") {
@@ -21,12 +21,14 @@ export default async function handler(req, res) {
 
   try {
     const result = await setWebhook(webhookUrl, config.webhookSecret);
+    const menuButton = await setChatMenuButton();
     const info = await getWebhookInfo();
 
     res.status(200).json({
       ok: true,
       webhookUrl,
       setWebhook: result,
+      menuButton,
       webhookInfo: info,
     });
   } catch (error) {
